@@ -174,7 +174,8 @@
   line-height: 1.56;
   letter-spacing: 0.03em;
   transform: translateY(294px);
-  transition: transform 250ms var(--cubic-animation);
+  transition: transform 250ms var(--cubic-animation),
+  opacity 250ms var(--cubic-animation);
 }
 
 .portfolio__item:hover .example__text,

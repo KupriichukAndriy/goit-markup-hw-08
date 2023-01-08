@@ -53,7 +53,7 @@
   border-radius: 4px;
   color: $primary-icon-color;
 
-  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+  transform: rotateY(0deg);
   transition: 250ms var(--cubic-animation),
     transform 750ms var(--cubic-animation);
 
@@ -67,7 +67,7 @@
   @media screen and (min-width: $desktop) {
     &:hover,
     &:focus {
-      transform: rotateY(360deg) rotateZ(360deg) rotateY(360deg);
+      transform: rotateY(360deg);
     }
   }
 }

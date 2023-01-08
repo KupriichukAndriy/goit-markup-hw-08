@@ -13,65 +13,127 @@
     </head>
   <body>
     
-    <header class="header">
-      <div class="container">
-        <a href="#" class="logo"><span class="accent">Web</span> Studio</a>
-
-        <div class="navigation__box" data-menu>
-          <nav class="navigation">
-            <ul class="navigation__list list">
-              <li class="navigation__item">
-                <a class="navigation__link link" href="./index.html">Студія</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link link current" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="navigation__item"><a class="navigation__link link" href="">Контакти</a></li>
-            </ul>
-          </nav>
-
-          <ul class="contact__list list">
-            <li class="contact__item">
-              <a href="mailto:info@devstudio.com" class="contact__address link">
-                <svg class="contact__icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-mail"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-
-            <li class="contact__item">
-              <a href="tell:+380961111111" class="contact__address link">
-                <svg class="contact__icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-phone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+    <header class="page-header">
+      <div class="container container--main-navigation">
+        <div class="page-header__mobile">
+          <a class="logo" href="./index.html"
+            ><span class="logo__web">Web</span>Studio</a
+          >
         </div>
-
         <button
+          class="menu-button"
           type="button"
-          class="mobile"
           aria-expanded="false"
           data-menu-button
         >
           <svg
+            class="switch"
             width="40"
             height="40"
-            aria-label="перемикач мобільного меню"
+            aria-label="Перемикач основного меню"
           >
             <use
-              class="mobile__close"
-              href="./images/icons.svg#icon-menu_close"
+              class="icon-menu"
+              href="./images/icons.svg#icon-menu_open"
             ></use>
             <use
-              class="mobile__open"
-              href="./images/icons.svg#icon-menu_open"
+              class="icon-close"
+              href="./images/icons.svg#icon-menu_close"
             ></use>
           </svg>
         </button>
+
+        <div class="nav-hide">
+          <nav class="page-header__navigation">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link site-nav--current" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="header-contacts">
+          <li class="header-contacts__item">
+            <a
+              class="header-contacts__mail-link"
+              href="mailto:info@devstudio.com"
+            >
+              <svg
+                wight="16px"
+                height="12px"
+                class="header-contacts__icon header-contacts__icon--envelope"
+              >
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="header-contacts__item">
+            <a class="header-contacts__phone-link" href="tel:+380961111111">
+              <svg
+                wight="10px"
+                height="16px"
+                class="header-contacts__icon header-contacts__icon--smartphone"
+              >
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="mobile" data-menu>
+        <ul class="menu-mobile">
+          <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="./index.html">Студія</a>
+          </li>
+          <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="./index.html">Контакти</a>
+          </li>
+        </ul>
+
+        <div class="mobile-contacts-box">
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a class="mobile-contacts__link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                class="mobile-contacts__link mobile-contacts__link--email"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="">Instagram</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="">Twitter</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="">Facebook</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     
@@ -654,7 +716,7 @@
           
 
           <div class="address">
-            <a href="" class="logo logo--footer"><span class="accent">Web</span> Studio</a>
+            <a href="" class="logo logo--footer"><span class="logo__web">Web</span> Studio</a>
             <address>
               <ul class="address__list list">
                 <li class="address__item">
