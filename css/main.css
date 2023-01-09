@@ -159,12 +159,12 @@ img {
   }
 }
 
-.site-nav--current {
+.site-nav__link.current {
   color: #2196f3;
   position: relative;
 }
 
-.site-nav--current::after {
+.site-nav__link.current::after {
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -177,8 +177,8 @@ img {
           animation-name: current-anima;
   -webkit-animation-duration: 250ms;
           animation-duration: 250ms;
-  -webkit-animation-timing-function: var(--cubic);
-          animation-timing-function: var(--cubic);
+  -webkit-animation-timing-function: var(--cubic-animation);
+          animation-timing-function: var(--cubic-animation);
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -208,7 +208,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-color);
-  transition: color 250ms var(--cubic);
+  transition: color 250ms var(--cubic-animation);
 }
 .site-nav__link:hover, .site-nav__link:focus {
   color: #2196f3;
@@ -268,7 +268,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
-  transition: color 250ms var(--cubic);
+  transition: color 250ms var(--cubic-animation);
 }
 .header-contacts__mail-link:hover, .header-contacts__mail-link:focus, .header-contacts__mail-link:hover, .header-contacts__mail-link:focus,
 .header-contacts__phone-link:hover,
@@ -296,7 +296,7 @@ img {
   margin-left: auto;
   cursor: pointer;
   outline: none;
-  transition: color 250ms var(--cubic);
+  transition: color 250ms var(--cubic-animation);
 }
 .menu-button:hover .switch, .menu-button:focus .switch {
   fill: #2196f3;
@@ -342,13 +342,16 @@ img {
   padding: 48px 84px 48px 40px;
   width: 100%;
   height: 100%;
+  opacity: 0;
   background-color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  transition: opacity 500ms var(--cubic-animation);
 }
 .mobile.is-open {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .mobile.is-open {
@@ -370,9 +373,13 @@ menu-mobile__item:last-child {
   line-height: 47px;
   letter-spacing: 0.02em;
   color: #212121;
-  transition: color 250ms var(--cubic);
+  transition: color 250ms var(--cubic-animation);
 }
 .menu-mobile__link:hover, .menu-mobile__link:focus {
+  color: #2196f3;
+}
+
+.menu-mobile__link--current {
   color: #2196f3;
 }
 
@@ -1436,7 +1443,6 @@ menu-mobile__item:last-child {
   position: absolute;
   top: 50%;
   left: 15px;
-  transform: translateY(-50%);
   transition: fill 250ms var(--cubic-animation);
 }
 
@@ -1464,12 +1470,13 @@ menu-mobile__item:last-child {
   border-color: #2196f3;
 }
 
-.accept__field {
+.accept {
   display: flex;
   align-items: center;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .accept__field {
+  .accept {
     justify-content: center;
   }
 }

@@ -122,8 +122,6 @@
   position: absolute;
   top: 50%;
   left: 15px;
-  transform: translateY(-50%);
-
   transition: fill 250ms var(--cubic-animation);
 }
 
@@ -155,11 +153,12 @@
   }
 }
 
-.accept__field {
+.accept {
   display: flex;
   align-items: center;
-  
+  padding-bottom: 30px;
   @media screen and (min-width: 1200px) {
+    
     justify-content: center;
   }
 }
@@ -194,7 +193,7 @@
 
 .accept__title {
   margin-left: 8px;
-
+  
   font-size: 12px;
 
   color: #757575;
